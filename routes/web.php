@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','BukuController@index');
+Route::get('/add','BukuController@create');
+Route::post('/store','BukuController@store');
+Route::get('/edit/{id}','BukuController@edit');
+Route::post('/update','BukuController@update');
+Route::get('/delete/{id}','BukuController@destroy');
